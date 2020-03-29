@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ApiMusic</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js" charset="utf-8"></script>
+        <script src="js/main.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <div class="container-fullwidth">
+            <header>
+                <div class="box">
+                    <i class="fab fa-spotify"></i>
+                </div>
+            </header>
+            <div class="box">
+                <select class="genre-selector">
+                    <option value="" disabled selected>Scegli il tuo genere</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Pop">Pop</option>
+                    <option value="Jazz">Jazz</option>
+                    <option value="Metal">Metal</option>
+                    <option value="All">All</option>
+                </select>
+            </div>
+            <div class="container box">
+            </div>
+        </div>
+    </body>
+
+    <script id="card-template" type="text/x-handlebars-template">
+        <div class="card" data-genre={{genre}}>
+            <img src="{{albumPic}}" alt="{{albumTitle}}">
+            <h3>{{albumTitle}}</h3>
+            <span>{{artistName}}</span>
+            <span>{{year}}</span>
+        </div>
+    </script>
+
+</html>
